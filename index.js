@@ -11,7 +11,7 @@ let options = {
         reconnect: true
     },
     identity: {
-        username: "Zouzouil782_fr",
+        username: "zouzouil_bot",
         password: params["token"]
     },
     channels: ["zouzouil782_fr"]
