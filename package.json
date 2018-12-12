@@ -1,0 +1,28 @@
+{
+  "name": "twitchchatbot-btc",
+  "version": "1.0.0",
+  "description": "A twitch chat bot who convert ubtc to euros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzo-billis/TwitchChatBot-BTC.git"
+  },
+  "keywords": [
+    "twitch",
+    "chat",
+    "bot"
+  ],
+  "author": "Enzo BILLIS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enzo-billis/TwitchChatBot-BTC/issues"
+  },
+  "homepage": "https://github.com/enzo-billis/TwitchChatBot-BTC#readme",
+  "dependencies": {
+    "btc-value": "^1.6.2",
+    "tmi.js": "^1.2.1"
+  }
+}
