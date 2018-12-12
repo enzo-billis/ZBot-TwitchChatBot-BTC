@@ -62,7 +62,8 @@ function onMessageHandler (target, context, msg, self) {
 function conv (target, context, params) {
     if(params[0]){
         const convertedValue = params[0]*ubtcvalue
-        client.say(target, params[0]+" ubtc = "+convertedValue+" €.")
+        console.log(params[0])
+        client.say(target, params[0]+" μbtc = "+roundToTwo(convertedValue)+" €.")
     }
 }
 
@@ -80,4 +81,8 @@ function refreshBtcValue(){
         ubtcvalue = value / 1000000
 
     })
+}
+
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
 }
