@@ -11,10 +11,10 @@ let options = {
         reconnect: true
     },
     identity: {
-        username: "zouzouil_bot",
+        username: params["username"],
         password: params["token"]
     },
-    channels: ["zouzouil782_fr"]
+    channels: params["channels"]
 };
 
 let ubtcvalue;
