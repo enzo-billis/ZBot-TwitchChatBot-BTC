@@ -32,7 +32,6 @@ client.connect();
 function onConnectedHandler (addr, port) {
     refreshBtcValue();
     console.log(`* Connected to ${addr}:${port}`)
-    client.say(options["channels"][0],"Coucou")
 }
 
 function onMessageHandler (target, context, msg, self) {
