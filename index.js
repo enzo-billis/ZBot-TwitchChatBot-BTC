@@ -1,5 +1,6 @@
 let tmi = require('tmi.js');
 let btcValue = require('btc-value');
+let params = require('./params')
 
 let options = {
     options: {
@@ -11,7 +12,7 @@ let options = {
     },
     identity: {
         username: "Zouzouil782_fr",
-        password: "oauth:zfgm5ng9bnkvapkpkek1bcg9zeqrk9"
+        password: params["token"]
     },
     channels: ["zouzouil782_fr"]
 };
@@ -55,7 +56,6 @@ function onMessageHandler (target, context, msg, self) {
     } else {
         console.log(`* Unknown command ${commandName} from ${context.username}`)
     }
-    console.log(target);
 }
 
 function conv (target, context, params) {
@@ -77,6 +77,6 @@ function onDisconnectHandler (reason) {
 function refreshBtcValue(){
     btcValue.getConvertedValue('EUR').then(value => {
         ubtcvalue = value / 1000000
-        console.log(value+"€")
+
     })
 }
