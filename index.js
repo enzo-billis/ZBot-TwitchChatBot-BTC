@@ -21,7 +21,7 @@ let ubtcvalue;
 
 let client = new tmi.client(options);
 
-let commandsKnow = {conv, help};
+let commandsKnow = {conv, zhelp};
 
 client.on('message', onMessageHandler)
 client.on('connected', onConnectedHandler)
@@ -59,15 +59,15 @@ function onMessageHandler (target, context, msg, self) {
 }
 
 function conv (target, context, params) {
-    if(params[0]){
+    if(params[0] && !isNaN(params[0])){
         const convertedValue = params[0]*ubtcvalue
         console.log(params[0])
-        client.say(target, params[0]+" μbtc = "+roundToTwo(convertedValue)+" €.")
+        client.say(target, params[0]+" μbtc ⇒ "+roundToTwo(convertedValue)+" €.")
     }
 }
 
-function help (target, context, params) {
-    client.say(target, "Ecrivez !conv [ubtc] dans le chat. Où [ubtc] est la valeur de ubtc à convertir en euros.")
+function zhelp (target, context, params) {
+    client.say(target, "Ecrivez !conv μbtc dans le chat. Où μbtc est la valeur de μbtc à convertir en euros. Exemple : !conv 600")
 }
 
 function onDisconnectHandler (reason) {
