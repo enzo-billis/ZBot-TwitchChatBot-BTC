@@ -1,6 +1,3 @@
-
-**
-
 # ZBot
 
 *A useless twitch chatbot*
@@ -43,4 +40,4 @@ Sinon si le premier paramètres est un "e" et le deuxième un chiffre vous aurez
 
 >   zouzouil_bot says 20 € ⇒ 6675.57 μbtc.
 
- Thank's to for the markdown editor : [StackEdit](https://stackedit.io/).
+ Thank's to StackEdit for the markdown editor : [StackEdit](https://stackedit.io/).
