@@ -17,6 +17,7 @@ let options = {
     channels: params["channels"]
 };
 
+//Variable contains the micro btc value
 let ubtcvalue;
 
 let client = new tmi.client(options);
@@ -59,10 +60,15 @@ function onMessageHandler (target, context, msg, self) {
 }
 
 function conv (target, context, params) {
+    let convertedValue = 0
     if(params[0] && !isNaN(params[0])){
-        const convertedValue = params[0]*ubtcvalue
+        convertedValue = params[0]*ubtcvalue
         console.log(params[0])
         client.say(target, params[0]+" μbtc ⇒ "+roundToTwo(convertedValue)+" €.")
+    }
+    else if(params[0] && params[0] == "e" && !isNaN(params[1])) {
+        convertedValue = params[1]/ubtcvalue
+      client.say(target, params[1]+" € ⇒ "+roundToTwo(convertedValue)+" μbtc.")
     }
 }
 
