@@ -73,7 +73,7 @@ function conv (target, context, params) {
 }
 
 function zhelp (target, context, params) {
-    client.say(target, "Ecrivez !conv μbtc dans le chat. Où μbtc est la valeur de μbtc à convertir en euros. Exemple : !conv 600")
+    client.say(target, "https://github.com/enzo-billis/TwitchChatBot-BTC/blob/master/README.md#commandes")
 }
 
 function onDisconnectHandler (reason) {

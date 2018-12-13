@@ -4,7 +4,6 @@
     <list default="true" id="0afacace-3ae5-4942-b5f5-c145ad0c8ecf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,12 +24,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="134" />
+          <entry key="js" value="197" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="134" />
+          <entry key="JavaScript" value="197" />
         </counts>
       </usages-collector>
     </session>
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="644">
+              <caret line="75" column="104" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -172,12 +171,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544639274601</updated>
       <workItem from="1544639275807" duration="4074000" />
-      <workItem from="1544689582967" duration="609000" />
+      <workItem from="1544689582967" duration="1844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4683000" />
+    <option name="totallyTimeSpent" value="5918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -215,8 +214,8 @@
     <entry file="file://$PROJECT_DIR$/.env" />
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="644">
+          <caret line="75" column="104" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
         </state>
       </provider>
     </entry>
