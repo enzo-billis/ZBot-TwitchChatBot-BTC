@@ -10,13 +10,13 @@ ZBot a été crée dans le but de s’entraîner dans le développement NodeJS. 
  - NPM
  - Un compte twitch pour votre bot
 ## Installation
- - Téléchargez les sources du projet et installez les dépendances.
- - Copier/Coller le fichier ***params.json.EXEMPLE*** et renommez le ***params.json***
- - Ouvrez params.json et remplissez les informations demandées. 
+ - Téléchargez les sources du projet et installez les dépendances avec la commande ***npm i***.
+ - Renommer le fichier ***params.json.EXEMPLE*** en ***params.json***
+ - Ouvrez ***params.json*** et remplissez les informations comme ci-dessous : 
 	 - Token : Il s'agit du token du compte twitch du bot. Vous pouvez le récupérer avec https://twitchapps.com/tmi
-	 - Username : Il s'agit du nom de votre bot. Il doit être le même que celui du compte. Sans majuscule.
-	 - Channels : C'est la liste des streams sur lequel votre bot se connectera au lancement. Exemple : *"channels": ["DarkWador", "Choubi","JohnSnow"]*
-- Enfin lancez le bot avec la commande : node index.js
+	 - Username : Il s'agit du nom de votre bot ***sans majuscule***. ATTENTION: il s'agit du ***nom du compte par lequel vous avez récupéré le token.*** Si il s'agit du token de votre compte de twitch, alors le bot portera le même nom. 
+	 - Channels : C'est la liste des streams sur lequel votre bot se connectera au lancement. Rentrez simplement le nom de la ou les chaînes visées. *Exemple : "channels": ["DarkWador", "Choubi","JohnSnow"]*
+- Enfin lancez le bot avec la commande : ***node index.js***
 	 
 Vous devez laissez le bot tourner, sinon il se déconnectera des chaînes.
 
