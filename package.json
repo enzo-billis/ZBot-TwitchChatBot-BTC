@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/enzo-billis/TwitchChatBot-BTC#readme",
   "dependencies": {
-    "btc-value": "^1.6.2",
+    "btc-value": "^3.0.1",
     "cryptiles": "^4.1.3",
     "hoek": "^6.1.2",
     "tmi.js": "^1.5.0"

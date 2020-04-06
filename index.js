@@ -7,7 +7,7 @@ let options = {
         debug: true
     },
     connection: {
-        cluster: 'aws',
+        secure: true,
         reconnect: true
     },
     identity: {
@@ -30,8 +30,9 @@ client.on('disconnected', onDisconnectHandler)
 
 client.connect();
 
-function onConnectedHandler (addr, port) {
-    refreshBtcValue();
+async function onConnectedHandler(addr, port) {
+    await btcValue.setApiKey(params["token-api-btc"]);
+    await refreshBtcValue();
     console.log(`* Connected to ${addr}:${port}`)
 }
 
@@ -82,9 +83,8 @@ function onDisconnectHandler (reason) {
 }
 
 function refreshBtcValue(){
-    btcValue.getConvertedValue('EUR').then(value => {
+    btcValue({currencyCode: 'EUR'}).then(value => {
         ubtcvalue = value / 1000000
-
     })
 }
 
