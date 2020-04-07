@@ -30,3 +30,7 @@ build/Release
 node_modules
 
 .idea/
+
+bin/
+
+build/
