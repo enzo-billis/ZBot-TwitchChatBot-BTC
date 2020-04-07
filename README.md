@@ -1,5 +1,5 @@
 
-# ZBot V2.0
+# ZBot
 
 *A useless twitch chatbot*
 
@@ -15,27 +15,26 @@ Each streamer can do whatever they want with ZBot, it's totaly free and open sou
 
 ## Prerequisite
 
- - Node JS ([https://nodejs.org/en/download/](https://nodejs.org/en/download/))
  - A Twitch Account (Nooooo really ??)
  - Your personnal computer or a server
  - 5 minutes of your time
  
 ## Installation
- - Download sources [here](https://github.com/enzo-billis/ZBot-TwitchChatBot-BTC/archive/master.zip) 
- - Unzip in a fresh folder and install dependencies through a command line (located in this folder). Use the following command to install them:  `npm i`
- - Duplicate the file ***params.json.EXEMPLE*** and rename it to ***params.json*** (Care, don't move the file !)
+ - Download sources [here](https://github.com/enzo-billis/ZBot-TwitchChatBot-BTC/releases)
+ - Unzip in a fresh folder
  - Open params.json and fill it like this: 
 	 - **token**: Token of the Twitch Account (find it [here](https://twitchapps.com/tmi))
 	 - **username**: Name of the Twitch account used above. Lowercase only.
 	 - **channels**: List of the channel, whose ZBot will connect after starting. 
 	 Example : *["DarkWador", "Choubi", "JohnSnow"]*
 	 - **currency**: This is the currency whose ZBot will use, choose between "EUR", "USD" ou "GBP"
-	 - **refreshEvery**: Refresh delay for the BTC rate (second)
+	 - **refreshEvery**: Refresh delay for the BTC rate (in second, minimum 60)
 	 - **convertTimeout**: Minimal duration between two conversion command (second)
-- Finally start ZBot with the following : `npm start`
+- Finally to start ZBot execute `ZBot-V2-{your-version}.exe`
 	 
-When these steps are done ZBot is ready to work ! You don't need to configure it again. Next time just start it with `npm start`.
+When these steps are done ZBot is ready to work ! You don't need to configure it again. Next time just start it by executing the exe file.
 Please do not close the command line, or shutdown your computer, otherwise ZBot will stop working.
+**If the command line close instantly, please configure you params.json as explain above.**
 
 ## Commands
 
