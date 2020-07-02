@@ -117,7 +117,7 @@ export default class Bot {
 
         if(!params[1] || params[1] === "u" || params[1].includes('btc')) {
             const convertedValue = value * this.ubtcValue;
-            
+
             let decimal = convertedValue < 10 ? 100 : 1;
             decimal = convertedValue < 1 ? 10000 : decimal;
 
@@ -141,7 +141,7 @@ export default class Bot {
     }
 
     getValue = async (target, context, params) => {
-        params.unshift(1);
-        this.converter(target, context, params);
+        const {currencySymbole} = this.params
+        this.client.say(target, `1 BTC -> ${Math.round(this.ubtcValue * 1000000)} ${currencySymbole}`);
     }
 }
