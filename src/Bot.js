@@ -12,6 +12,7 @@ export default class Bot {
             "c": this.converter,
             "conv": this.converter,
             "convert": this.converter,
+            "value": this.getValue,
             "h": this.help,
             "help": this.help,
         }
@@ -115,13 +116,17 @@ export default class Bot {
         }
 
         if(!params[1] || params[1] === "u" || params[1].includes('btc')) {
-            const convertedValue = value * this.ubtcValue
-            this.client.say(target, `${value} μbtc -> ${Math.round(convertedValue)} ${currencySymbole} :)`)
+            const convertedValue = value * this.ubtcValue;
+            
+            let decimal = convertedValue < 10 ? 100 : 1;
+            decimal = convertedValue < 1 ? 10000 : decimal;
+
+            this.client.say(target, `${value} μbtc -> ${Math.round(convertedValue * decimal) / decimal} ${currencySymbole} :)`);
         }
 
         else if(params[1] && params[1] === currency[0] || params[1] === currencySymbole || params[1].includes(currency)) {
-            const convertedValue = value / this.ubtcValue
-            this.client.say(target, `${value} ${currencySymbole} -> ${Math.round(convertedValue)} μbtc :)`)
+            const convertedValue = value / this.ubtcValue;
+            this.client.say(target, `${value} ${currencySymbole} -> ${Math.round(convertedValue)} μbtc :)`);
         }
 
         return this.converterTimeout = setTimeout(() => this.converterTimeout = null, convertTimeout * 1000)
@@ -133,5 +138,10 @@ export default class Bot {
         const btcValue = parseFloat(data.bpi[currency].rate.replace(',',''))
         this.ubtcValue = btcValue / 1000000
         console.log(`${moment().toISOString()} | Bitcoin value refreshed. New value is ${btcValue} ${currencySymbole}`)
+    }
+
+    getValue = async (target, context, params) => {
+        params.unshift(1);
+        this.converter(target, context, params);
     }
 }
