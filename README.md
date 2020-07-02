@@ -75,4 +75,21 @@ As you can see, ZBot is reliable, there is multiple ways to write your conversio
 
 >   100 $ -> 13953 μbtc
 
+### Value
+This command shows the actual value of the bitcoin. This is an alias of the command !convert with a static amount of 1 in each case.
+
+ - !value [currency] 
+
+Here is few examples:
+
+    !value
+ 
+
+>   1 μbtc -> 0.0082 €
+
+    !value e
+ 
+
+>   1 € -> 122 μbtc
+
  Thank's to for the markdown editor : [StackEdit](https://stackedit.io/).
